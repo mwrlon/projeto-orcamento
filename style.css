@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: #1e1e1e;
+  background: linear-gradient(to bottom right, #000000, #16301c);
   font-family: 'Inter', sans-serif;
   color: white;
 }
@@ -40,7 +40,7 @@ nav a {
 .banner {
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to bottom right, #000000, #4b4b4b);
+  background: linear-gradient(to top, #000000, #16301c);
   border-radius: 30px;
   padding: 100px 120px;
   margin: 60px auto;
