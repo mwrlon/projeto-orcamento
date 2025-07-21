@@ -38,6 +38,7 @@ nav a {
 }
 
 .banner {
+  display: flex; 
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(to top, #000000, #16301c);
@@ -45,19 +46,21 @@ nav a {
   padding: 100px 120px;
   margin: 60px auto;
   max-width: 1200px;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .textodentro {
   max-width: 550px;
 }
 
-.textodentro p {
+.titulo {
   font-size: 34px;
   font-weight: bold;
   line-height: 1.4;
 }
 
-.textodentro p span {
+.titulo span {
   color: #4ade80;
 }
 
@@ -66,16 +69,15 @@ nav a {
   color: #d1d5db;
   margin-top: 25px;
   line-height: 1.6;
-  display: block;
 }
 
 .imgbanner {
   width: 500px;
+  max-width: 100%;
   height: auto;
   border-radius: 20px;
   object-fit: cover;
 }
-
 
 .conhecerplanos {
   display: inline-flex;
@@ -88,6 +90,7 @@ nav a {
   text-decoration: none;
   font-size: 14px;
   cursor: pointer;
+  margin-top: 30px;
 }
 
 @media (max-width: 768px) {
@@ -96,3 +99,52 @@ nav a {
     text-align: center;
     padding: 40px;
   }
+
+  .imgbanner {
+    margin-top: 30px;
+  }
+}
+
+.tudo {
+  background-color: #000000;
+  padding: 40px 20px;
+}
+
+.todas {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.coluna {
+  flex: 1 1 200px;
+}
+
+.coluna h4 {
+  font-size: 16px;
+  color: hsl(149, 66%, 30%);
+  margin-bottom: 10px;
+}
+
+.coluna ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.coluna ul li {
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.linha{
+  border: none;
+  height: 1px;
+  background-color:  hsl(149, 66%, 30%);
+  width: 100%;
+  margin: 5px 0;
+}
