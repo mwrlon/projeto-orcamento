@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Conta</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
 </head>
 <style>
 
@@ -81,15 +82,19 @@ h2 {
   font-size: 1.2rem;
 }
 
+.header {
+  background-color: #2e2e2e;
+  padding: 20px;
+  text-align: center;
+}
 </style>
 <header>
-    <div class="logo">Orça<span>Fácil</span></div>
-    <nav class="textoheader">
-        <a href="index.html">Início</a>
-        <a href="#">Meus Orçamentos</a>
-        <a href="sobrenos.html">Sobre Nós</a>
-    </nav>
-    <a href="criarconta.html" class="botao">Criar Conta →</a>
+  <div class="logo">Orça<span>Fácil</span></div>
+  <nav class="textoheader">
+    <a href="index.html">Início</a>
+    <a href="orçamentos.html">Meus Orçamentos</a>
+    <a href="sobrenos.html">Sobre Nós</a>
+  </nav>
 </header>
 
 <body>
@@ -104,8 +109,9 @@ h2 {
             <input type="text" placeholder="CPF">
             <input type="text" placeholder="CEP">
             <button type="submit">
-                <span class="icon">👤</span>
-                Criar conta
+                 <i class="fi fi-sr-user"></i>
+                <a href ="orçamentos.html">Criar conta</a>
+                </div>
             </button>
         </form>
     </div>

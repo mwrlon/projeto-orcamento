@@ -6,6 +6,7 @@ body {
 }
 
 header {
+  flex-direction: row;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,6 +16,7 @@ header {
 
 .logo {
   font-size: 30px;
+  margin-bottom: 0;
 }
 
 .logo span {
@@ -29,9 +31,9 @@ nav a {
 }
 
 .botao {
-  background: white;
-  color: black;
-  padding: 8px 15px;
+  background-color: white;
+  color:  hsl(149, 66%, 30%);
+  padding: 10px 15px;
   border-radius: 20px;
   text-decoration: none;
   font-size: 20px;
@@ -41,7 +43,7 @@ nav a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to top, #000000, #16301c);
+  background: linear-gradient( top, #000000, #16301c);
   border-radius: 30px;
   padding: 100px 120px;
   margin: 60px auto;
@@ -184,3 +186,75 @@ nav a {
   max-width: 1000px;
   text-align: center;
 }
+
+.orcamentos {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 50px;
+  margin-top: 20px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color:  hsl(149, 66%, 30%);
+}
+
+p {
+  margin-top:20px;
+}
+
+.container {
+   transform: scale(0.9);
+}
+
+a {
+    color: inherit; 
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.lala {
+  color: black
+}
+
+  .comeco {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .lalalala {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .textoheader {
+  display: flex;
+  gap: 30px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-40%);
+  }
