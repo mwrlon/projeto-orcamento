@@ -38,7 +38,7 @@ nav a {
 }
 
 .banner {
-  display: flex; 
+  display: flex;
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(to top, #000000, #16301c);
@@ -141,10 +141,46 @@ nav a {
   margin-bottom: 6px;
 }
 
-.linha{
+.linha {
   border: none;
   height: 1px;
-  background-color:  hsl(149, 66%, 30%);
+  background-color: hsl(149, 66%, 30%);
   width: 100%;
   margin: 5px 0;
+}
+
+.chegadecomplicacao {
+  font-size: 58px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.subtitulos {
+  color: #d1d5db;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.rapidoegratuito {
+  text-align: center;
+  color: #4ade80;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.banner1 {
+  background: linear-gradient(to top, #000000, #16301c);
+  border-radius: 30px;
+  padding: 100px 50px;
+  margin: 60px auto;
+  max-width: 1000px;
+  text-align: center;
 }
