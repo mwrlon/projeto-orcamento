@@ -1,146 +1,161 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <title>Orçamentos</title>
-  <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
-  body {
-  margin: 0;
-   font-family: Poppins, sans-serif;
-  background-color: #0c0f0c;
-  color: white;
-  padding: 20px;
-}
+    body {
+      margin: 0;
+      font-family: Poppins, sans-serif;
+      background-color: #0c0f0c;
+      color: white;
+      padding: 20px;
+    }
 
-header {
-  width: 94%;
-  padding: 20px 60px;
-  background-color: #0c0f0c;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    header {
+      width: 94%;
+      padding: 20px 60px;
+      background-color: #0c0f0c;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.logo {
-  font-size: 30px;
-  margin-bottom: 0;
-  font-family: Poppins, sans-serif
-}
+    .logo {
+      font-size: 30px;
+      margin: 0;
+    }
 
-.logo span {
-  color: #4ade80;
-  font-family: Poppins, sans-serif;
-  font-weight: 700;
+    .logo span {
+      color: #4ade80;
+      font-weight: 700;
+    }
 
-}
+    nav a {
+      margin: 0 30px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-nav a {
-  margin: 0 30px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transform: scale(1.3);
-}
+    .botao {
+      border: solid #4ade80;
+      color: #ffffff;
+      font-weight: 700;
+      padding: 10px 15px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 20px;
+      transition: opacity 0.3s ease, background 0.3s ease;
+    }
 
-.botao {
-  background-color: white;
-  color:  hsl(149, 66%, 30%);
-  padding: 10px 15px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 20px;
-}
+    .botao:hover {
+      background: #4ade80;
+      color: #ffffff;
+      opacity: 1;
+    }
 
+    .orcamentos {
+      text-align: center;
+      font-weight: 600;
+      font-size: 50px;
+      margin-top: 20px;
+    }
 
-.tudo {
-  background-color: #000000;
-  padding: 40px 20px;
-}
+    .container {
+      transform: scale(0.9);
+      overflow-x: auto;
+    }
 
-.todas {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: space-between;
-}
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
 
-.coluna {
-  flex: 1 1 200px;
-}
+    th,
+    td {
+      padding: 12px 10px;
+      text-align: left;
+      border-bottom: 1px solid #444;
+    }
 
-.coluna h4 {
-  font-size: 16px;
-  color: hsl(149, 66%, 30%);
-  margin-bottom: 10px;
-}
+    th {
+      color: #4ade80;
+    }
 
-.coluna ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+    .tudo {
+      background-color: #000;
+      padding: 40px 20px;
+    }
 
-.coluna ul li {
-  font-size: 14px;
-  color: #ffffff;
-  margin-bottom: 6px;
-}
+    .todas {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+    }
 
-.linha {
-  border: none;
-  height: 1px;
-  background-color: hsl(149, 66%, 30%);
-  width: 100%;
-  margin: 5px 0;
-}
+    .coluna {
+      flex: 1 1 200px;
+    }
 
-.orcamentos {
-  text-align: center;
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 50px;
-  margin-top: 20px;
-}
+    .coluna h4 {
+      font-size: 16px;
+      color: hsl(149, 66%, 30%);
+      margin-bottom: 10px;
+    }
 
-.container {
-   transform: scale(0.9);
-}
+    .coluna ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
 
+    .coluna ul li {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
 
-  .comeco {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-  }
+    .linha {
+      border: none;
+      height: 1px;
+      background-color: hsl(149, 66%, 30%);
+      width: 100%;
+      margin: 30px 0 10px;
+    }
 
-
+    .comeco {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
   </style>
 </head>
-<body>
-  
+
 <body>
   <header>
     <div class="logo">Orça<span>Fácil</span></div>
     <nav class="textoheader">
-        <div class="comeco"</div>
-      <a href="index.html">Início</a>
-      <a href="criarconta.html">Meus Orçamentos</a>
-      <a href="sobrenos.html">Sobre Nós</a>
+      <div class="comeco">
+        <a href="index.html">Início</a>
+        <a href="criarconta.html">Meus Orçamentos</a>
+        <a href="sobrenos.html">Sobre Nós</a>
       </div>
     </nav>
     <strong>
-      <a href="#" class="botao"> <i class="fi fi-sr-user"> </i>Usuario 1
-      </a></strong>
+      <a href="#" class="botao"><i class="fi fi-sr-user"></i> Usuario 1</a>
+    </strong>
   </header>
-  <p></p>
-<h2 class="orcamentos">Meus Orçamentos</h2>
-   <div class="container">
+
+  <h2 class="orcamentos">Meus Orçamentos</h2>
+
+  <div class="container">
     <table>
       <thead>
         <tr>
@@ -163,7 +178,7 @@ nav a {
           <td>R$ 1,50</td>
           <td>R$ 15,00</td>
           <td>Aprovado</td>
-          <td><a class="lalaliro" href="#">📄 Baixar</a></td>
+          <td><a href="#">📄 Baixar</a></td>
         </tr>
         <tr>
           <td>Empresa B</td>
@@ -178,12 +193,9 @@ nav a {
       </tbody>
     </table>
   </div>
-  <p></p>
-
 
   <footer class="tudo">
     <div class="todas">
-
       <div class="coluna">
         <h4>OrçaFácil</h4>
         <ul>
@@ -229,11 +241,10 @@ nav a {
         </ul>
       </div>
 
-     <div class="linha"></div>
-
-     <h4>OrçaFácil — 2025 – © Todos os direitos reservados. LWSA – Filial OrçaFácil. CNPJ: 02.351.877/0011-24</h4>
-
+      <div class="linha"></div>
+      <h4>OrçaFácil — 2025 – © Todos os direitos reservados. LWSA – Filial OrçaFácil. CNPJ: 02.351.877/0011-24</h4>
     </div>
   </footer>
 </body>
+
 </html>

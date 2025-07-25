@@ -2,364 +2,191 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar Conta</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Conta</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
-  <style>
-      body {
-  margin: 0;
-   font-family: Poppins, sans-serif;
-  background-color: #0c0f0c;
-  color: white;
-  padding: 20px;
-}
-
-header {
-  width: 94%;
-  padding: 20px 60px;
-  background-color: #0c0f0c;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 30px;
-  margin-bottom: 0;
-  font-family: Poppins, sans-serif
-}
-
-.logo span {
-  color: #4ade80;
-  font-family: Poppins, sans-serif;
-  font-weight: 700;
-
-}
-
-nav a {
-  margin: 0 30px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transform: scale(1.3);
-}
-
-.botao {
-  background-color: white;
-  color:  hsl(149, 66%, 30%);
-  padding: 10px 15px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-.banner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient( top, #000000, #16301c);
-  border-radius: 30px;
-  padding: 20px 40px;
-  margin: 60px auto;
-  max-width: 1600px;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.textodentro {
-  max-width: 800px;
-}
-
-.titulo {
-  font-size: 48px;
-  font-weight: bold;
-  line-height: 1.25;
-}
-
-.titulo span {
-  color: #4ade80;
-}
-
-.subtitulodentro {
-  font-size: 30px;
-  color: #d1d5db;
-  margin-top: 0px;
-  line-height: 1.4;
-}
-
-.imgbanner {
-  width: 650px;
-  max-width: 100%;
-  height: 600px;
-  border-radius: 20px;
-  object-fit: cover;
-  justify-content: right;
-  box-shadow: #3db96b5f 5px 5px 80px;
-}
-
-.conhecerplanos {
-  display: inline-flex;
-  align-items: center;
-  background: white;
-  color: #1e293b;
-  font-weight: 600;
-  padding: 15px 25px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-size: 26px;
-  cursor: pointer;
-  margin-top: 60px;
-}
-
-@media (max-width: 768px) {
-  .banner {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px;
+<style>
+  body {
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    background-color: #0c0f0c;
+    color: white;
+    padding: 20px;
   }
 
-  .imgbanner {
-    margin-top: 30px;
+  header {
+    width: 94%;
+    padding: 20px 60px;
+    background-color: #0c0f0c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-}
 
-.tudo {
-  background-color: #000000;
-  padding: 40px 20px;
-}
+  .logo {
+    font-size: 30px;
+  }
 
-.todas {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: space-between;
-}
+  .logo span {
+    color: #4ade80;
+    font-weight: 700;
+  }
 
-.coluna {
-  flex: 1 1 200px;
-}
+  nav a {
+    margin: 0 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    justify-content: space-between;
+  }
 
-.coluna h4 {
-  font-size: 16px;
-  color: hsl(149, 66%, 30%);
-  margin-bottom: 10px;
-}
+  .botao {
+    background-color: transparent;
+    border: solid #4ade80;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 10px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
 
-.coluna ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+  .botao:hover {
+    background-color: #4ade80;
+    color: #ffffff;
+  }
 
-.coluna ul li {
-  font-size: 14px;
-  color: #ffffff;
-  margin-bottom: 6px;
-}
 
-.linha {
-  border: none;
-  height: 1px;
-  background-color: hsl(149, 66%, 30%);
-  width: 100%;
-  margin: 5px 0;
-}
+  .tudo {
+    background-color: #000000;
+    padding: 40px 20px;
+  }
 
-.chegadecomplicacao {
-  font-size: 58px;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-bottom: 20px;
-}
+  .todas {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+  }
 
-.subtitulos {
-  color: #d1d5db;
-  font-size: 18px;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  margin-bottom: 30px;
-}
+  .coluna {
+    flex: 1 1 200px;
+  }
 
-.rapidoegratuito {
-  text-align: center;
-  color: #4ade80;
-  font-weight: 600;
-  font-size: 16px;
-  letter-spacing: 1px;
-}
+  .coluna h4 {
+    font-size: 16px;
+    color: #4ade80;
+    margin-bottom: 10px;
+  }
 
-.banner1 {
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient( top, #000000, #16301c);
-  border-radius: 30px;
-  padding: 100px 120px;
-  margin: 60px auto;
-  max-width: 1200px;
-  gap: 40px;
-  flex-wrap: wrap;
-}
+  .coluna ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
-.orcamentos {
-  text-align: center;
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 50px;
-  margin-top: 20px;
-}
+  .coluna ul li {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 6px;
+  }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-}
+  .linha {
+    border: none;
+    height: 1px;
+    background-color: #4ade80;
+    width: 100%;
+    margin: 5px 0;
+  }
 
-th, td {
-  border: 1px solid #ccc;
-  padding: 12px;
-  text-align: center;
-}
+  .container {
+    transform: scale(0.9);
+  }
 
-th {
-  background-color:  hsl(149, 66%, 30%);
-}
-
-p {
-  margin-top:20px;
-}
-
-.container {
-   transform: scale(0.9);
-}
-
-a {
-    color: inherit; 
+  a {
+    color: inherit;
     text-decoration: none;
     text-align: center;
     justify-content: center;
     align-items: center;
-}
-
-.lala {
-  color: black
-}
-
-  .comeco {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
   }
 
-  .lalalala {
+  .container {
+    text-align: center;
+    padding: 50px
+  }
+
+  .verde {
+    color: #4ade80;
+  }
+
+
+  .logo-branco {
+    color: white;
+    font-weight: bold;
+  }
+
+  .logo-verde {
+    color: #4ade80;
+    font-weight: bold;
+  }
+
+  .form {
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .form input {
+    background-color: #2e2e2e;
+    border: none;
+    padding: 12px;
+    border-radius: 20px;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .form input::placeholder {
+    color: #ccc;
+  }
+
+  .form button {
+    margin-top: 10px;
+    padding: 12px;
+    background-color: white;
+    color: #2e2e2e;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    cursor: pointer;
+    gap: 8px;
+    font-weight: bold;
   }
 
   .textoheader {
-  display: flex;
-  gap: 30px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-40%);
+    display: flex;
+    gap: 57px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-40%);
   }
-
-  .imagem{
-    border-radius: 50px;
-  }
-
-
-.container {
-  text-align: center;
-  padding: 50px
-}
-
-h1 {
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-
-.verde {
-  color: #49a86f; /* Verde claro */
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
-
-.logo-branco {
-  color: white;
-  font-weight: bold;
-}
-
-.logo-verde {
-  color: #49a86f;
-  font-weight: bold;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 300px;
-  margin: 0 auto;
-}
-
-.form input {
-  background-color: #2e2e2e;
-  border: none;
-  padding: 12px;
-  border-radius: 20px;
-  color: white;
-  font-size: 1rem;
-  text-align: center;
-}
-
-.form input::placeholder {
-  color: #ccc;
-}
-
-.form button {
-  margin-top: 10px;
-  padding: 12px;
-  background-color: white;
-  color: #2e2e2e;
-  border: none;
-  border-radius: 20px;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  gap: 8px;
-  font-weight: bold;
-}
-
-.icon {
-  color: #2ecc71;
-  font-size: 1.2rem;
-}
-
-.header {
-  background-color: #2e2e2e;
-  padding: 20px;
-  text-align: center;
-}
 </style>
+
 <header>
   <div class="logo">Orça<span>Fácil</span></div>
   <nav class="textoheader">
@@ -367,26 +194,27 @@ h2 {
     <a href="criarconta.html">Meus Orçamentos</a>
     <a href="sobrenos.html">Sobre Nós</a>
   </nav>
+  <a href="criarconta.html" class="botao">Criar Conta →</a>
 </header>
 
 <body>
-    <div class="container">
-        <h1>Resolva seus <span class="verde">problemas financeiros</span> com</h1>
-        <h2><span class="logo-branco">Orça</span><span class="logo-verde">Fácil</span></h2>
+  <div class="container">
+    <h1>Resolva seus <span class="verde">problemas financeiros</span> com</h1>
+    <h2><span class="logo-branco">Orça</span><span class="logo-verde">Fácil</span></h2>
 
-        <form class="form">
-            <input type="text" placeholder="Nome">
-            <input type="email" placeholder="E-mail">
-            <input type="tel" placeholder="Número de Telefone">
-            <input type="text" placeholder="CPF">
-            <input type="text" placeholder="CEP">
-            <button type="submit">
-                 <i class="fi fi-sr-user"></i>
-                <a href ="orçamentos.html">Criar conta</a>
-                </div>
-            </button>
-        </form>
-    </div>
+    <form class="form">
+      <input type="text" placeholder="Nome">
+      <input type="email" placeholder="E-mail">
+      <input type="tel" placeholder="Número de Telefone">
+      <input type="text" placeholder="CPF">
+      <input type="text" placeholder="CEP">
+      <button type="submit">
+        <i class="fi fi-sr-user"></i>
+        <a href="orçamentos.html">Criar conta</a>
+  </div>
+  </button>
+  </form>
+  </div>
 </body>
 
 </html>
@@ -396,58 +224,58 @@ h2 {
 
 
 <footer class="tudo">
-    <div class="todas">
+  <div class="todas">
 
-        <div class="coluna">
-            <h4>OrçaFácil</h4>
-            <ul>
-                <li>Conheça o OrçaFácil</li>
-                <li>Planos e Preços</li>
-                <li>Contato</li>
-                <li>Carreiras</li>
-                <li>Manual de Marca</li>
-                <li>Segurança e Privacidade</li>
-                <li>Termos de uso</li>
-            </ul>
-        </div>
-
-        <div class="coluna">
-            <h4>Usando OrçaFácil</h4>
-            <ul>
-                <li>Orça Academy</li>
-                <li>Implantação Guiada</li>
-                <li>Treinamento ao vivo</li>
-                <li>Central de ajuda</li>
-                <li>Youtube</li>
-                <li>Blog</li>
-            </ul>
-        </div>
-
-        <div class="coluna">
-            <h4>Parceiros</h4>
-            <ul>
-                <li>Parceiros Top Especialistas</li>
-                <li>Parceiros Afiliados</li>
-                <li>API e Aplicativos</li>
-                <li>Clube de Vantagens</li>
-            </ul>
-        </div>
-
-        <div class="coluna">
-            <h4>Fale Conosco</h4>
-            <ul>
-                <li>Chat Online</li>
-                <li>Telefone</li>
-                <li>WhatsApp</li>
-                <li>Email</li>
-            </ul>
-        </div>
-
-        <div class="linha"></div>
-
-        <h4>OrçaFácil — 2025 – © Todos os direitos reservados. LWSA – Filial OrçaFácil. CNPJ: 02.351.877/0011-24</h4>
-
+    <div class="coluna">
+      <h4>OrçaFácil</h4>
+      <ul>
+        <li>Conheça o OrçaFácil</li>
+        <li>Planos e Preços</li>
+        <li>Contato</li>
+        <li>Carreiras</li>
+        <li>Manual de Marca</li>
+        <li>Segurança e Privacidade</li>
+        <li>Termos de uso</li>
+      </ul>
     </div>
+
+    <div class="coluna">
+      <h4>Usando OrçaFácil</h4>
+      <ul>
+        <li>Orça Academy</li>
+        <li>Implantação Guiada</li>
+        <li>Treinamento ao vivo</li>
+        <li>Central de ajuda</li>
+        <li>Youtube</li>
+        <li>Blog</li>
+      </ul>
+    </div>
+
+    <div class="coluna">
+      <h4>Parceiros</h4>
+      <ul>
+        <li>Parceiros Top Especialistas</li>
+        <li>Parceiros Afiliados</li>
+        <li>API e Aplicativos</li>
+        <li>Clube de Vantagens</li>
+      </ul>
+    </div>
+
+    <div class="coluna">
+      <h4>Fale Conosco</h4>
+      <ul>
+        <li>Chat Online</li>
+        <li>Telefone</li>
+        <li>WhatsApp</li>
+        <li>Email</li>
+      </ul>
+    </div>
+
+    <div class="linha"></div>
+
+    <h4>OrçaFácil — 2025 – © Todos os direitos reservados. LWSA – Filial OrçaFácil. CNPJ: 02.351.877/0011-24</h4>
+
+  </div>
 </footer>
 </body>
 
