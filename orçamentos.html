@@ -4,6 +4,123 @@
   <meta charset="UTF-8">
   <title>Orçamentos</title>
   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+  body {
+  margin: 0;
+   font-family: Poppins, sans-serif;
+  background-color: #0c0f0c;
+  color: white;
+  padding: 20px;
+}
+
+header {
+  width: 94%;
+  padding: 20px 60px;
+  background-color: #0c0f0c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 30px;
+  margin-bottom: 0;
+  font-family: Poppins, sans-serif
+}
+
+.logo span {
+  color: #4ade80;
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+
+}
+
+nav a {
+  margin: 0 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transform: scale(1.3);
+}
+
+.botao {
+  background-color: white;
+  color:  hsl(149, 66%, 30%);
+  padding: 10px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+
+.tudo {
+  background-color: #000000;
+  padding: 40px 20px;
+}
+
+.todas {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.coluna {
+  flex: 1 1 200px;
+}
+
+.coluna h4 {
+  font-size: 16px;
+  color: hsl(149, 66%, 30%);
+  margin-bottom: 10px;
+}
+
+.coluna ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.coluna ul li {
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.linha {
+  border: none;
+  height: 1px;
+  background-color: hsl(149, 66%, 30%);
+  width: 100%;
+  margin: 5px 0;
+}
+
+.orcamentos {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 50px;
+  margin-top: 20px;
+}
+
+.container {
+   transform: scale(0.9);
+}
+
+
+  .comeco {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+
+  </style>
 </head>
 <body>
   
@@ -17,7 +134,9 @@
       <a href="sobrenos.html">Sobre Nós</a>
       </div>
     </nav>
-    <strong><a href="#" class="botao">Usuario 1</a></strong>
+    <strong>
+      <a href="#" class="botao"> <i class="fi fi-sr-user"> </i>Usuario 1
+      </a></strong>
   </header>
   <p></p>
 <h2 class="orcamentos">Meus Orçamentos</h2>
@@ -44,7 +163,7 @@
           <td>R$ 1,50</td>
           <td>R$ 15,00</td>
           <td>Aprovado</td>
-          <td><a href="#">📄 Baixar</a></td>
+          <td><a class="lalaliro" href="#">📄 Baixar</a></td>
         </tr>
         <tr>
           <td>Empresa B</td>
@@ -116,10 +235,5 @@
 
     </div>
   </footer>
-
 </body>
-</html>
-
-</body>
-
 </html>
