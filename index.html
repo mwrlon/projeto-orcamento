@@ -135,6 +135,254 @@
       left: 50%;
       transform: translateX(-40%);
     }
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Carousel Section */
+.carousel-section {
+  background-color: #0a0a0a;
+  padding: 100px 60px;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carousel-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.carousel-subtitle {
+  font-size: 48px;
+  font-weight: 800;
+  color: #22c55e;
+  margin-bottom: 80px;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 40px;
+  max-width: 1700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel-wrapper {
+  flex: 1;
+  max-width: 1200px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  /* CORREÇÃO: Largura total para 6 cards (2 grupos de 3) */
+  width: 200%;
+  gap: 0;
+}
+
+.service-card {
+  background-color: #ffffff;
+  color: #1e293b;
+  border-radius: 20px;
+  padding: 35px;
+  /* CORREÇÃO: Largura exata para 3 cards por grupo */
+  width: calc(48% / 3); /* 50% dividido por 3 = 16.666% */
+  min-width: 280px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 40px rgba(34, 197, 94, 0.15);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  margin-right: 20px;
+}
+
+.service-card:nth-child(3n) {
+  margin-right: 40px; /* Espaço maior entre grupos */
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(34, 197, 94, 0.25);
+}
+
+.card-icon {
+  width: 70px;
+  height: 70px;
+  background-color: #dcfce7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  color: #22c55e;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #1e293b;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #64748b;
+  text-align: center;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.carousel-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background-color: #16a34a;
+  transform: scale(1.1);
+}
+
+.carousel-btn:active {
+  transform: scale(0.95);
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 50px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background-color: #374151;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator:hover {
+  background-color: #4b5563;
+}
+
+.indicator.active {
+  background-color: #22c55e;
+  transform: scale(1.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .carousel-section {
+    padding: 80px 40px;
+  }
+
+  .carousel-title,
+  .carousel-subtitle {
+    font-size: 40px;
+  }
+
+  .service-card {
+    min-width: 250px;
+    height: 360px;
+    padding: 30px;
+    margin-right: 15px;
+  }
+
+  .service-card:nth-child(3n) {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-section {
+    padding: 60px 20px;
+  }
+
+  .carousel-title,
+  .carousel-subtitle {
+    font-size: 32px;
+  }
+
+  .carousel-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Mobile: 1 card por vez */
+  .carousel-track {
+    width: 600%; /* 6 cards = 600% */
+  }
+
+  .service-card {
+    width: calc(100% / 6); /* 1 card por vez */
+    min-width: 300px;
+    max-width: px;
+    height: 350px;
+    padding: 25px;
+    margin-right: 20px;
+  }
+
+  .service-card:nth-child(3n) {
+    margin-right: 20px;
+  }
+
+  .carousel-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-title,
+  .carousel-subtitle {
+    font-size: 28px;
+  }
+
+  .service-card {
+    min-width: 280px;
+    height: 320px;
+    padding: 20px;
+  }
+}
+
   </style>
 </head>
 
@@ -157,13 +405,114 @@
       <p class="subtitulodentro">
         Com as ordens de serviço, fica mais fácil controlar a execução do trabalho e fazer a gestão do negócio
       </p>
-      <div class="conhecerplanos">Veja nossos planos →</div>
+      <div href="criarconta.html" class="conhecerplanos">Veja nossos planos →</div>
     </div>
     <div class="imgcontent">
       <img class="imgbanner" src="https://otimize.niuco.com.br/wp-content/uploads/2024/02/thumbs-3.png" alt="" />
     </div>
   </div>
 
+    
+  <!-- Carousel Section -->
+  <section class="carousel-section">
+    <h2 class="carousel-title">Impulsione o negócio com a</h2>
+    <h3 class="carousel-subtitle">gestão dos serviços</h3>
+
+    <div class="carousel-container">
+      <button class="carousel-btn carousel-prev" onclick="prevSlide()">‹</button>
+
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="carouselTrack">
+          <!-- GRUPO 1: Cards 1, 2, 3 -->
+          <div class="service-card">
+            <div class="card-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <h4 class="card-title">ESCALABILIDADE E INTEGRAÇÃO</h4>
+            <p class="card-description">A plataforma foi construída com arquitetura modular que suporta fácil escalabilidade e integração com APIs RESTful, possibilitando conexão futura com sistemas ERP, CRM, plataformas de pagamento e outras soluções corporativas para otimizar fluxos comerciais.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="card-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14,2 14,8 20,8"></polyline>
+              </svg>
+            </div>
+            <h4 class="card-title">INTERFACE INTUITIVA E RESPONSIVA</h4>
+            <p class="card-description">Implementação frontend baseada em frameworks modernos (React, Vue ou Angular), garantindo design responsivo que adapta a interface a múltiplos dispositivos e resoluções para máxima usabilidade.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="card-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h4 class="card-title">CADASTRO DINÂMICO DE ENTIDADES</h4>
+            <p class="card-description">Permite o cadastro dinâmico e validação de clientes, produtos e serviços, garantindo a integridade dos dados e minimizando erros manuais. Validações em tempo real asseguram que informações essenciais</p>
+          </div>
+
+          <!-- GRUPO 2: Cards 4, 5, 6 -->
+          <div class="service-card">
+            <div class="card-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h4 class="card-title">IMPOSTOS ATUALIZADOS</h4>
+            <p class="card-description">Nosso sistema acompanha mudanças tributárias mais recentes, como a reforma que substituiu PIS, Cofins, ICMS e IBS. Cálculos atualizados automaticamente, com suporte a descontos, impostos específicos por setor e futuras exigências legais</p>
+          </div>
+
+          <div class="service-card">
+            <div class="card-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14,2 14,8 20,8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10,9 9,9 8,9"></polyline>
+              </svg>
+            </div>
+            <h4 class="card-title">GERAÇÃO DE DOCUMENTOS EM PDF</h4>
+            <p class="card-description">Utilização de bibliotecas (como jsPDF, jsPDF ou wkhtmltopdf) para criar documentos PDF personalizados, com templates configuráveis que suportam identidade visual e dados dinâmicos do orçamento.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="card-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h4 class="card-title">SEGURANÇA E CONTROLE DE ACESSO</h4>
+            <p class="card-description">Implementamos mecanismos de autenticação segura, proteção contra acesso não autorizado e criptografia dos dados sensíveis para garantir a confidencialidade e integridade das informações do cliente e da empresa.</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-btn carousel-next" onclick="nextSlide()">›</button>
+    </div>
+
+    <!-- Carousel Indicators -->
+    <div class="carousel-indicators" id="carouselIndicators">
+      <button class="indicator active" onclick="goToSlide(0)"></button>
+      <button class="indicator" onclick="goToSlide(1)"></button>
+    </div>
+  </section>
+
+
+
+  
   <footer class="tudo">
     <div class="todas">
       <div class="coluna">
@@ -213,6 +562,119 @@
       <h4>OrçaFácil — 2025 – © Todos os direitos reservados. LWSA – Filial OrçaFácil. CNPJ: 02.351.877/0011-24</h4>
     </div>
   </footer>
+  <script>
+   // Configurações do Carrossel - CORRIGIDO para 3 cards
+let currentSlide = 0
+const itemsPerSlide = 3 // 3 cards por slide
+const totalItems = 6 // Total de 6 cards
+const totalSlides = 2 // 2 grupos (3 + 3)
+
+// Função para atualizar a posição do carrossel
+function updateCarousel() {
+  const track = document.getElementById("carouselTrack")
+  const indicators = document.querySelectorAll(".indicator")
+
+  if (track) {
+    // CORREÇÃO: Move exatamente 50% para mostrar o próximo grupo de 3
+    const translateX = -(currentSlide * 50) // 0% ou -50%
+    track.style.transform = `translateX(${translateX}%)`
+  }
+
+  // Atualizar indicadores
+  indicators.forEach((indicator, index) => {
+    indicator.classList.toggle("active", index === currentSlide)
+  })
+
+  // Debug - remova depois de testar
+  console.log(`Slide atual: ${currentSlide}, Translação: ${-(currentSlide * 50)}%`)
+}
+
+// Função para ir para o próximo slide
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % totalSlides
+  updateCarousel()
+}
+
+// Função para ir para o slide anterior
+function prevSlide() {
+  currentSlide = currentSlide === 0 ? totalSlides - 1 : currentSlide - 1
+  updateCarousel()
+}
+
+// Função para ir para um slide específico
+function goToSlide(slideIndex) {
+  if (slideIndex >= 0 && slideIndex < totalSlides) {
+    currentSlide = slideIndex
+    updateCarousel()
+  }
+}
+
+// Função para auto-play (opcional)
+function startAutoPlay(interval = 5000) {
+  return setInterval(nextSlide, interval)
+}
+
+// Função para parar auto-play
+function stopAutoPlay(autoPlayInterval) {
+  if (autoPlayInterval) {
+    clearInterval(autoPlayInterval)
+  }
+}
+
+// Inicializar quando o DOM carregar
+document.addEventListener("DOMContentLoaded", () => {
+  // Inicializar carrossel
+  updateCarousel()
+
+  // Auto-play opcional (descomente para ativar)
+  // const autoPlay = startAutoPlay(5000);
+})
+
+// Suporte para navegação por teclado
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowLeft") {
+    prevSlide()
+  } else if (e.key === "ArrowRight") {
+    nextSlide()
+  }
+})
+
+// Suporte para touch/swipe em dispositivos móveis
+let startX = 0
+let endX = 0
+
+document.addEventListener("touchstart", (e) => {
+  startX = e.changedTouches[0].screenX
+})
+
+document.addEventListener("touchend", (e) => {
+  endX = e.changedTouches[0].screenX
+  handleSwipe()
+})
+
+function handleSwipe() {
+  const swipeThreshold = 50
+  const diff = startX - endX
+
+  if (Math.abs(diff) > swipeThreshold) {
+    if (diff > 0) {
+      // Swipe left - próximo slide
+      nextSlide()
+    } else {
+      // Swipe right - slide anterior
+      prevSlide()
+    }
+  }
+}
+
+// Função para redimensionar carrossel em tempo real
+function handleResize() {
+  updateCarousel()
+}
+
+window.addEventListener("resize", handleResize)
+
+  </script>
 </body>
 
 </html>
