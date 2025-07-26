@@ -33,7 +33,7 @@ nav a {
 }
 
 .botao {
-  border: solid #4ade80;
+  border: solid #41be6f;
   color: #ffffff;
   font-weight: 700;
   padding: 10px 15px;
@@ -44,7 +44,7 @@ nav a {
 }
 
 .botao:hover {
-  background: #4ade80;
+  background: #41be6f;
   color: #ffffff;
   opacity: 1;
 }
