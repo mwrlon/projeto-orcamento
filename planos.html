@@ -7,10 +7,256 @@
   <title>OrçaFácil</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
- 
-  </style>
 </head>
 <body>
+  <style>
+
+    .tudo {
+      background-color: #000;
+      padding: 40px 20px;
+    }
+
+    .todas {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+    }
+
+    .coluna {
+      flex: 1 1 200px;
+    }
+
+    .coluna h4 {
+      font-size: 16px;
+      color: hsl(149, 66%, 30%);
+      margin-bottom: 10px;
+    }
+
+    .coluna ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .coluna ul li {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .linha {
+      border: none;
+      height: 1px;
+      background-color: hsl(149, 66%, 30%);
+      width: 100%;
+      margin: 30px 0 10px;
+    }
+
+    body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  background-color: #0c0f0c;
+  color: white;
+  padding: 20px;
+}
+
+header {
+   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background-color: #0a0a0a;
+}
+
+.logo {
+  font-size: 30px;
+}
+
+.logo span {
+  color: #4ade80;
+  font-weight: 700;
+}
+
+nav a {
+  margin: 0 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+    .texto {
+      font-size: 44px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .texto span {
+      color: #41be6f; 
+    }
+
+    .textinho {
+      font-size: 30px;
+      text-align: center;
+      color: #666; 
+      margin-bottom: 10px;
+    }
+
+    .recursos span {
+      color: #41be6f; 
+    }
+
+    .recursos {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 24px;
+    }
+
+.recursos-linha {
+  display: flex;
+  justify-content: center; 
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.recursos-linha p {
+  margin: 0;
+  padding: 0 10px;
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+
+}
+
+.mae {
+  padding: 15px 30px;
+  padding-bottom: 30px;
+  border-radius: 40px;
+  font-size: 22px;
+  margin: 60px auto;
+  background-color: white;
+  color: black;
+  max-width: 1500px;
+}
+
+
+
+.planos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+  color: black;
+}
+
+.planos p {
+  color : #344253
+}
+
+.plano {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  padding: 30px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.plano:hover {
+  transform: translateY(-5px);
+}
+
+
+.plano h2 {
+  font-size: 1.5rem;
+  color: #1b3a59;
+  margin-bottom: 10px;
+}
+
+.plano h3 {
+  font-size: 1.8rem;
+  color: #1b3a59;
+  margin: 20px 0;
+}
+
+.plano h3 span {
+  font-size: 2.2rem;
+  color: #28a745;
+}
+
+
+.plano button {
+  background-color: #28a745;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.2s ease;
+}
+
+.plano button:hover {
+  background-color: #218838;
+}
+
+
+.plano ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.plano ul li {
+  margin: 10px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.plano ul li::before {
+  content: "✔";
+  color: #28a745;
+  position: absolute;
+  left: 0;
+  font-size: 1rem;
+}
+
+
+@media (max-width: 1000px) {
+  .planos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plano {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .button {
+      background-color: #28a745;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.2s ease;
+  }
+}
+
+  </style>
   <header>
     <div class="logo">Orça<span>Fácil</span></div>
     <nav class="textoheader">
@@ -23,12 +269,35 @@
   </header>
   </head>
 <body>
+
+
+
+
+
+
+<p class="texto">O <span>plano ideal </span>para o seu negócio, tem na OrçaFácil!<p/>
+  <p class="textinho">Comece grátis e sem inserir dados de pagamento.</p>
+
+<div class="mae">
+  <div class="recursos"
+ <h2>Recursos <span>ilimitados</span> em todos os planos</h2>
+    </div>
+
+
+<div class="recursos-linha">
+<p>Emissão de notas fiscais</p><p> Integração com marketplaces, lojas virtuais, loja física, logística, e muito +</p><p>Atualização automática de pedidos e estoque</p>
+</div>
+</div>
+
+
+
+
   <section class="planos">
     <div class="plano base">
       <h2>Base</h2>
       <p>Para quem precisa controlar a operação de vendas de um jeito descomplicado</p>
       <h3>R$<span>55</span>/mês</h3>
-      <button>Comece grátis</button>
+       <a href="criarconta.html" class="button"> Comece grátis</a>
       <ul>
         <li> 5 usuários</li>
         <li> 60 MB de dados</li>
@@ -45,7 +314,7 @@
       <h2>Plus</h2>
       <p>Para quem quer fazer a gestão completa do negócio em uma única plataforma</p>
       <h3>R$<span>110</span>/mês</h3>
-      <button>Comece grátis</button>
+       <a href="criarconta.html" class="button"> Comece grátis</a>
       <ul>
         <li> 10 usuários</li>
         <li> 120 MB de dados</li>
@@ -62,7 +331,7 @@
       <h2>Premium</h2>
       <p>Para quem busca otimizar processos com automações e dashboards</p>
       <h3>R$<span>185</span>/mês</h3>
-      <button>Comece grátis</button>
+       <a href="criarconta.html" class="button"> Comece grátis</a>
       <ul>
         <li> 15 usuários</li>
         <li> 360 MB de dados</li>
@@ -72,6 +341,23 @@
         <li> Impressão automática de etiquetas</li>
         <li> Dashboards com até 3 contas</li>
         <li> Integração com 1 POS</li>
+      </ul>
+    </div>
+
+      <div class="plano ultimate">
+      <h2>Ultimate</h2>
+      <p>Para quem busca ter automação de ponta para empresas de grande porte</p>
+      <h3>R$<span>450</span>/mês</h3>
+       <a href="criarconta.html" class="button"> Comece grátis</a>
+      <ul>
+        <li> 50 usuários</li>
+        <li> 1,2 GB de dados</li>
+        <li> 30 GB de arquivos</li>
+        <li> 7 mil importações de pedidos</li>
+        <li> Tudo do Plano Premium</li>
+        <li> Impressão automática de etiquetas</li>
+        <li> Dashboards com até 7 contas</li>
+        <li> Integração com 3 POS</li>
       </ul>
       <p></p>
     </div>
