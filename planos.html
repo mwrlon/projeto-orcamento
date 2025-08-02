@@ -19,167 +19,184 @@
     }
 
     .texto span {
-      color: #41be6f; 
+      color: #41be6f;
     }
 
     .textinho {
       font-size: 30px;
       text-align: center;
-      color: #666; 
+      color: #666;
       margin-bottom: 10px;
     }
 
-    .recursos span {
-      color: #41be6f; 
-    }
-
-    .recursos {
+    .recursos-container {
+      background-color: #ffffff;
+      padding: 40px 20px;
+      border-radius: 24px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+      margin: 40px auto;
+      max-width: 1100px;
       text-align: center;
-      margin: 20px 0;
-      font-size: 24px;
     }
 
-.recursos-linha {
-  display: flex;
-  justify-content: center; 
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
+    .recursos-titulo {
+      font-size: 32px;
+      font-weight: 700;
+      color: #1b3a59;
+      margin-bottom: 30px;
+    }
 
-.recursos-linha p {
-  margin: 0;
-  padding: 0 10px;
-  font-size: 18px;
-  color: #333;
-  text-align: center;
+    .recursos-titulo span {
+      color: #28a745;
+    }
 
-}
+    .recursos-linha {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+    }
 
-.mae {
-  padding: 15px 30px;
-  padding-bottom: 30px;
-  border-radius: 40px;
-  font-size: 22px;
-  margin: 60px auto;
-  background-color: white;
-  color: black;
-  max-width: 1500px;
-}
+    .recurso-item {
+      transition: opacity 0.3s ease, background 0.3s ease;
+      font-size: 20px;
+      color: #333;
+      background-color: #ffffff;
+      padding: 12px 20px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 900px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      text-align: left;
+    }
 
+    .recurso-item:hover{
+      background: #28a745;
+      color: white;
+      opacity: 1;
+    }
+    
 
+    .mae {
+      padding: 15px 30px;
+      padding-bottom: 30px;
+      border-radius: 40px;
+      font-size: 22px;
+      margin: 60px auto;
+      background-color: white;
+      color: black;
+      max-width: 1500px;
+    }
 
-.planos {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 60px 20px;
-  flex-wrap: wrap;
-  color: black;
-}
+    .planos {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 60px 20px;
+      flex-wrap: wrap;
+      color: black;
+    }
 
-.planos p {
-  color : #344253
-}
+    .planos p {
+      color: #344253
+    }
 
-.plano {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-  padding: 30px;
-  width: 300px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
+    .plano {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      padding: 30px;
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
 
-.plano:hover {
-  transform: translateY(-5px);
-}
+    .plano:hover {
+      transform: translateY(-5px);
+    }
 
+    .plano h2 {
+      font-size: 1.5rem;
+      color: #1b3a59;
+      margin-bottom: 10px;
+    }
 
-.plano h2 {
-  font-size: 1.5rem;
-  color: #1b3a59;
-  margin-bottom: 10px;
-}
+    .plano h3 {
+      font-size: 1.8rem;
+      color: #1b3a59;
+      margin: 20px 0;
+    }
 
-.plano h3 {
-  font-size: 1.8rem;
-  color: #1b3a59;
-  margin: 20px 0;
-}
+    .plano h3 span {
+      font-size: 2.2rem;
+      color: #28a745;
+    }
 
-.plano h3 span {
-  font-size: 2.2rem;
-  color: #28a745;
-}
-
-
-.plano button {
-  background-color: #28a745;
-  color: rgb(0, 0, 0);
-  border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-bottom: 20px;
-  transition: background-color 0.2s ease;
-}
-
-.plano button:hover {
-  background-color: #218838;
-}
-
-
-.plano ul {
-  list-style: none;
-  padding: 0;
-  text-align: left;
-  font-size: 0.95rem;
-}
-
-.plano ul li {
-  margin: 10px 0;
-  padding-left: 20px;
-  position: relative;
-}
-
-.plano ul li::before {
-  content: "✔";
-  color: #28a745;
-  position: absolute;
-  left: 0;
-  font-size: 1rem;
-}
-
-
-@media (max-width: 1000px) {
-  .planos {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .plano {
-    width: 90%;
-    max-width: 400px;
-  }
-
-  .button {
+    .plano button {
       background-color: #28a745;
-  color: rgb(0, 0, 0);
-  border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-bottom: 20px;
-  transition: background-color 0.2s ease;
-  }
-}
+      color: rgb(0, 0, 0);
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-bottom: 20px;
+      transition: background-color 0.2s ease;
+    }
 
+    .plano button:hover {
+      background-color: #218838;
+    }
+
+    .plano ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    .plano ul li {
+      margin: 10px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .plano ul li::before {
+      content: "✔";
+      color: #28a745;
+      position: absolute;
+      left: 0;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 1000px) {
+      .planos {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .plano {
+        width: 90%;
+        max-width: 400px;
+      }
+
+      .button {
+        background-color: #28a745;
+        color: rgb(0, 0, 0);
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-bottom: 20px;
+        transition: background-color 0.2s ease;
+      }
+      }
   </style>
+</head>
+
+<body>
   <header>
     <div class="logo">Orça<span>Fácil</span></div>
     <nav class="textoheader">
@@ -190,37 +207,25 @@
     </nav>
     <a href="criarconta.html" class="botao">Criar Conta →</a>
   </header>
-  </head>
-<body>
 
-
-
-
-
-
-<p class="texto">O <span>plano ideal </span>para o seu negócio, tem na OrçaFácil!<p/>
+  <p class="texto">O <span>plano ideal </span>para o seu negócio, tem na OrçaFácil!</p>
   <p class="textinho">Comece grátis e sem inserir dados de pagamento.</p>
 
-<div class="mae">
-  <div class="recursos"
- <h2>Recursos <span>ilimitados</span> em todos os planos</h2>
+  <div class="recursos-container">
+    <h2 class="recursos-titulo">Recursos <span>ilimitados</span> em todos os planos</h2>
+    <div class="recursos-linha">
+      <div class="recurso-item">✔ Emissão de notas fiscais</div>
+      <div class="recurso-item">✔ Integração com marketplaces, lojas virtuais, loja física, logística, e muito +</div>
+      <div class="recurso-item">✔ Atualização automática de pedidos e estoque</div>
     </div>
-
-
-<div class="recursos-linha">
-<p>Emissão de notas fiscais</p><p> Integração com marketplaces, lojas virtuais, loja física, logística, e muito +</p><p>Atualização automática de pedidos e estoque</p>
-</div>
-</div>
-
-
-
+  </div>
 
   <section class="planos">
     <div class="plano base">
       <h2>Base</h2>
       <p>Para quem precisa controlar a operação de vendas de um jeito descomplicado</p>
       <h3>R$<span>55</span>/mês</h3>
-       <a href="criarconta.html" class="button"> Comece grátis</a>
+      <a href="criarconta.html" class="button"> Comece grátis</a>
       <ul>
         <li> 5 usuários</li>
         <li> 60 MB de dados</li>
@@ -237,7 +242,7 @@
       <h2>Plus</h2>
       <p>Para quem quer fazer a gestão completa do negócio em uma única plataforma</p>
       <h3>R$<span>110</span>/mês</h3>
-       <a href="criarconta.html" class="button"> Comece grátis</a>
+      <a href="criarconta.html" class="button"> Comece grátis</a>
       <ul>
         <li> 10 usuários</li>
         <li> 120 MB de dados</li>
@@ -254,7 +259,7 @@
       <h2>Premium</h2>
       <p>Para quem busca otimizar processos com automações e dashboards</p>
       <h3>R$<span>185</span>/mês</h3>
-       <a href="criarconta.html" class="button"> Comece grátis</a>
+      <a href="criarconta.html" class="button"> Comece grátis</a>
       <ul>
         <li> 15 usuários</li>
         <li> 360 MB de dados</li>
@@ -267,11 +272,11 @@
       </ul>
     </div>
 
-      <div class="plano ultimate">
+    <div class="plano ultimate">
       <h2>Ultimate</h2>
       <p>Para quem busca ter automação de ponta para empresas de grande porte</p>
       <h3>R$<span>450</span>/mês</h3>
-       <a href="criarconta.html" class="button"> Comece grátis</a>
+      <a href="criarconta.html" class="button"> Comece grátis</a>
       <ul>
         <li> 50 usuários</li>
         <li> 1,2 GB de dados</li>
@@ -282,49 +287,11 @@
         <li> Dashboards com até 7 contas</li>
         <li> Integração com 3 POS</li>
       </ul>
-      <p></p>
     </div>
-
   </section>
 </body>
 </html>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
   <footer class="tudo">
     <div class="todas">
 
