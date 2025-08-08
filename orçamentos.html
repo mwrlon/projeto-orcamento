@@ -8,104 +8,149 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
-  
-    .orcamentos {
+    
+    h1 {
       text-align: center;
-      font-weight: 600;
-      font-size: 50px;
-      margin-top: 20px;
+      margin-top: 2rem;
+      color: white;
+      font-size: 2.5rem;
     }
 
-    .container {
-      transform: scale(0.9);
-      overflow-x: auto;
+    .orcamento-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
+    .orcamento-card {
+      background-color: #1a1a1a;
+      border: 1px solid #41be6f;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 0 12px rgba(0, 255, 100, 0.1);
+      transition: transform 0.2s;
+      box-shadow: #41be6f 1px 1px 15px;
     }
 
-    th,
-    td {
-      padding: 12px 10px;
-      text-align: left;
-      border-bottom: 1px solid #444;
+    .orcamento-card:hover {
+      transform: translateY(-5px);
     }
 
-    th {
-      color: #4ade80;
+    .orcamento-card h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
     }
 
-    .comeco {
-      display: flex;
+    .orcamento-card p {
+      margin: 0.25rem 0;
+      font-size: 0.95rem;
+    }
+
+    .orcamento-status {
+      font-weight: bold;
+      padding: 0.3rem 0.6rem;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+
+    .aprovado {
+      background-color: #2ecc71;
+      color: #000;
+    }
+
+    .pendente {
+      background-color: #a259ff;
+      color: #000;
+    }
+
+    .download-btn {
+      margin-top: 1rem;
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 50px;
+      color: #ffffff;
+      border: solid #27ae60;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .download-btn:hover {
+      background-color: #27ae60;
+    }
+
+    .orcamento-container2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .criar-orcamento{
+      background-color: #1a1a1a;
+      border: 1px solid #a259ff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 0 12px rgba(0, 255, 100, 0.1);
+      transition: transform 0.2s;
+      box-shadow: #a259ff 1px 1px 15px;
+      justify-self: left;
       align-items: center;
-      gap: 10px;
     }
   </style>
 </head>
-
 <body>
+
+  <!-- Cabeçalho -->
   <header>
     <div class="logo">
-    <a href="index.html" class="logo">Orça<span>Fácil</span></a></div>
+      <a href="index.html" class="logo">Orça<span>Fácil</span></a></div>
     <nav class="textoheader">
-      <div class="comeco">
-        <a href="index.html">Início</a>
-        <a href="criarconta.html">Meus Orçamentos</a>
-        <a href="sobrenos.html">Sobre Nós</a>
-        <a href="planos.html">Planos</a>
-      </div>
+      <a href="index.html">Início</a>
+      <a href="criarconta.html">Meus Orçamentos</a>
+      <a href="sobrenos.html">Sobre Nós</a>
+      <a href="planos.html">Planos</a>
     </nav>
-    <strong>
-      <a href="#" class="botao"><i class="fi fi-sr-user"></i> Usuario 1</a>
-    </strong>
+    <a href="#" class="botao"><i class="fi fi-sr-user"></i> Usuario 1</a>
   </header>
 
-  <h2 class="orcamentos">Meus Orçamentos</h2>
+  <h1>Meus Orçamentos</h1>
 
-  <div class="container">
-    <table>
-      <thead>
-        <tr>
-          <th>Contratante</th>
-          <th>CNPJ</th>
-          <th>Produto</th>
-          <th>Quantidade</th>
-          <th>Preço Unitário</th>
-          <th>Total</th>
-          <th>Situação</th>
-          <th>Orçamento em PDF</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Empresa A</td>
-          <td>12.345.678/0001-90</td>
-          <td>Caneta</td>
-          <td>10</td>
-          <td>R$ 1,50</td>
-          <td>R$ 15,00</td>
-          <td>Aprovado</td>
-          <td><a href="#">📄 Baixar</a></td>
-        </tr>
-        <tr>
-          <td>Empresa B</td>
-          <td>98.765.432/0001-01</td>
-          <td>Caderno</td>
-          <td>5</td>
-          <td>R$ 10,00</td>
-          <td>R$ 50,00</td>
-          <td>Pendente</td>
-          <td><a href="#">📄 Baixar</a></td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="orcamento-container">
+    <div class="orcamento-card">
+      <h2>Empresa A</h2>
+      <p><strong>CNPJ:</strong> 12.345.678/0001-90</p>
+      <p><strong>Produto:</strong> Caneta</p>
+      <p><strong>Quantidade:</strong> 10</p>
+      <p><strong>Preço Unitário:</strong> R$ 1,50</p>
+      <p><strong>Total:</strong> R$ 15,00</p>
+      <span class="orcamento-status aprovado">Aprovado</span><br>
+      <a href="#" class="download-btn">📥 Baixar PDF</a>
+    </div>
+
+    <div class="orcamento-card">
+      <h2>Empresa B</h2>
+      <p><strong>CNPJ:</strong> 98.765.432/0001-01</p>
+      <p><strong>Produto:</strong> Caderno</p>
+      <p><strong>Quantidade:</strong> 5</p>
+      <p><strong>Preço Unitário:</strong> R$ 10,00</p>
+      <p><strong>Total:</strong> R$ 50,00</p>
+      <span class="orcamento-status pendente">Pendente</span><br>
+      <a href="#" class="download-btn">📥 Baixar PDF</a>
+    </div>
+    </div>
+    <div class="orcamento-container2">
+    <div class="criar-orcamento">
+      <h1>Criar Novo Orçamento +</h1>
+  </div>
   </div>
 
   <footer class="tudo">
     <div class="todas">
+
       <div class="coluna">
         <h4>OrçaFácil</h4>
         <ul>
@@ -152,9 +197,16 @@
       </div>
 
       <div class="linha"></div>
+
       <h4>OrçaFácil — 2025 – © Todos os direitos reservados. LWSA – Filial OrçaFácil. CNPJ: 02.351.877/0011-24</h4>
+
     </div>
   </footer>
+
+</body>
+
+</html>
+
 </body>
 
 </html>
