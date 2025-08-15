@@ -3,17 +3,25 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Orçamentos</title>
-  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meus Orçamentos - OrçaFácil</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
-    
+    body {
+      background-color: #111;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
     h1 {
       text-align: center;
       margin-top: 2rem;
-      color: white;
       font-size: 2.5rem;
+      color: #4ade80;
     }
 
     .orcamento-container {
@@ -28,7 +36,6 @@
       border: 1px solid #41be6f;
       border-radius: 12px;
       padding: 1.5rem;
-      box-shadow: 0 0 12px rgba(0, 255, 100, 0.1);
       transition: transform 0.2s;
       box-shadow: #41be6f 1px 1px 15px;
     }
@@ -40,6 +47,7 @@
     .orcamento-card h2 {
       font-size: 1.25rem;
       margin-bottom: 0.5rem;
+      color: #4ade80;
     }
 
     .orcamento-card p {
@@ -69,24 +77,53 @@
       margin-top: 1rem;
       display: inline-block;
       text-decoration: none;
-      border-radius: 50px;
-      color: #ffffff;
-      border: solid #27ae60;
-      padding: 0.5rem 1rem;
       border-radius: 6px;
+      color: #fff;
+      border: 1px solid #27ae60;
+      padding: 0.5rem 1rem;
       font-weight: bold;
-      transition: background-color 0.3s;
+      transition: 0.3s;
     }
 
     .download-btn:hover {
       background-color: #27ae60;
     }
 
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #000;
+    }
+
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #4ade80;
+    }
+
+    header nav a {
+      margin-right: 1rem;
+      color: white;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #000;
+      padding: 2rem;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    footer .coluna {
+      margin-bottom: 1rem;
+    }
   </style>
 </head>
+
 <body>
 
-  <!-- Cabeçalho -->
   <header>
     <div class="logo">
       <a href="index.html" class="logo">Orça<span>Fácil</span></a></div>
@@ -96,7 +133,7 @@
       <a href="sobrenos.html">Sobre Nós</a>
       <a href="planos.html">Planos</a>
     </nav>
-    <a href="#" class="botao"><i class="fi fi-sr-user"></i> Usuario 1</a>
+    <a href="criarconta.html" class="botao">Criar Conta →</a>
   </header>
 
   <h1>Meus Orçamentos</h1>
@@ -110,7 +147,10 @@
       <p><strong>Preço Unitário:</strong> R$ 1,50</p>
       <p><strong>Total:</strong> R$ 15,00</p>
       <span class="orcamento-status aprovado">Aprovado</span><br>
-      <a href="#" class="download-btn">📥 Baixar PDF</a>
+      <a href="#" class="download-btn"
+        onclick="gerarPDF('Empresa A','12.345.678/0001-90','Caneta','10','R$ 1,50','R$ 15,00','Aprovado')">
+        📥 Baixar PDF
+      </a>
     </div>
 
     <div class="orcamento-card">
@@ -121,13 +161,15 @@
       <p><strong>Preço Unitário:</strong> R$ 10,00</p>
       <p><strong>Total:</strong> R$ 50,00</p>
       <span class="orcamento-status pendente">Pendente</span><br>
-      <a href="#" class="download-btn">📥 Baixar PDF</a>
+      <a href="#" class="download-btn"
+        onclick="gerarPDF('Empresa B','98.765.432/0001-01','Caderno','5','R$ 10,00','R$ 50,00','Pendente')">
+        📥 Baixar PDF
+      </a>
     </div>
-    </div>
+  </div>
 
-  <footer class="tudo">
+   <footer class="tudo">
     <div class="todas">
-
       <div class="coluna">
         <h4>OrçaFácil</h4>
         <ul>
@@ -140,7 +182,6 @@
           <li>Termos de uso</li>
         </ul>
       </div>
-
       <div class="coluna">
         <h4>Usando OrçaFácil</h4>
         <ul>
@@ -152,7 +193,6 @@
           <li>Blog</li>
         </ul>
       </div>
-
       <div class="coluna">
         <h4>Parceiros</h4>
         <ul>
@@ -162,7 +202,6 @@
           <li>Clube de Vantagens</li>
         </ul>
       </div>
-
       <div class="coluna">
         <h4>Fale Conosco</h4>
         <ul>
@@ -174,15 +213,87 @@
       </div>
 
       <div class="linha"></div>
-
-      <h4>OrçaFácil — 2025 – © Todos os direitos reservados. LWSA – Filial OrçaFácil. CNPJ: 02.351.877/0011-24</h4>
-
-    </div>
+    <h4>OrçaFácil — 2025 – © Todos os direitos reservados.</h4>
   </footer>
 
-</body>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script>
+    const { jsPDF } = window.jspdf;
 
-</html>
+    function gerarPDF(empresa, cnpj, produto, quantidade, precoUnitario, total, situacao) {
+  const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+  const pageWidth = doc.internal.pageSize.getWidth();
+  const pageHeight = doc.internal.pageSize.getHeight();
+  const margin = 15;
+
+  // Título
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(22);
+  doc.setTextColor(34, 197, 94);
+  doc.text('OrçaFácil', pageWidth / 2, 25, { align: 'center' });
+
+  // Informações principais
+  doc.setFontSize(12);
+  doc.setTextColor(0, 0, 0);
+  doc.text(`Empresa: ${empresa}`, margin, 40);
+  doc.text(`CNPJ: ${cnpj}`, margin, 48);
+  doc.text(`Data: ${new Date().toLocaleDateString('pt-BR')}`, pageWidth - margin, 40, { align: 'right' });
+
+  // Tabela
+  const tableY = 60;
+  const headers = ['Produto', 'Qtd', 'Preço Unitário', 'Total', 'Situação'];
+  const colWidths = [60, 20, 35, 35, 40];
+  const rowHeight = 10;
+
+  doc.setFillColor(34, 197, 94);
+  doc.setTextColor(255, 255, 255);
+  doc.setFont('helvetica', 'bold');
+
+  let x = margin;
+  headers.forEach((h, i) => {
+    doc.rect(x, tableY, colWidths[i], rowHeight, 'F');
+    doc.text(h, x + 2, tableY + 7);
+    x += colWidths[i];
+  });
+
+  // Dados
+  doc.setFont('helvetica', 'normal');
+  doc.setTextColor(0, 0, 0);
+  x = margin;
+  const dados = [produto, quantidade, precoUnitario, total, situacao];
+  dados.forEach((d, i) => {
+    doc.rect(x, tableY + rowHeight, colWidths[i], rowHeight);
+    doc.text(String(d), x + 2, tableY + rowHeight + 7);
+    x += colWidths[i];
+  });
+
+  // Observações
+  const obsY = tableY + rowHeight * 2 + 10;
+  doc.setFontSize(10);
+  doc.setFont('helvetica', 'italic');
+  doc.text('Observações:', margin, obsY);
+  const observacoes = [
+    '- Este orçamento é válido por 10 dias úteis.',
+    '- Assinatura digital disponível via plataforma.',
+    '- Pagamento: 50% na aprovação e 50% na entrega.'
+  ];
+  observacoes.forEach((linha, i) => {
+    doc.text(linha, margin + 5, obsY + 8 + i * 6);
+  });
+
+  // Rodapé
+  doc.setDrawColor(200, 200, 200);
+  doc.line(margin, pageHeight - 17, pageWidth - margin, pageHeight - 17);
+  doc.setFontSize(9);
+  doc.setTextColor(120, 120, 120);
+  doc.text('OrçaFácil © 2025 — contato@orcafacil.com | (11) 1234-5678', pageWidth / 2, pageHeight - 10, { align: 'center' });
+
+  // Salvar PDF
+  doc.save(`Orcamento_${empresa.replace(/\s/g, '_')}.pdf`);
+}
+
+  </script>
 
 </body>
 
